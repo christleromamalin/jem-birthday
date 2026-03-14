@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Jem!</title><style>
+
+body{
+  margin:0;
+  font-family:"Comic Sans MS", cursive;
+  text-align:center;
+  color:white;
+  background:linear-gradient(270deg,#ff9ff3,#feca57,#48dbfb,#1dd1a1,#ff6b6b);
+  background-size:1000% 1000%;
+  animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.container{
+  padding:40px 20px;
+}
+
+h1{
+  font-size:55px;
+  text-shadow:4px 4px 0px black;
+}
+
+.subtitle{
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+.card{
+  background:white;
+  color:black;
+  border-radius:20px;
+  padding:25px;
+  max-width:600px;
+  margin:auto;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+button{
+  margin-top:20px;
+  padding:15px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  background:#ff6b6b;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+.hidden{
+  display:none;
+  font-size:22px;
+  margin-top:20px;
+}
+
+.cat-area{
+  margin-top:40px;
+}
+
+.cat{
+  font-size:60px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.cat:hover{
+  transform:scale(1.3) rotate(10deg);
+}
+
+.score{
+  font-size:22px;
+  margin-top:10px;
+}
+
+.gif{
+  width:200px;
+  border-radius:15px;
+  margin:10px;
+}
+
+footer{
+  margin-top:40px;
+  font-size:14px;
+}
+
+</style></head><body><!-- birthday music --><audio autoplay loop>
+<source src="https://www.myinstants.com/media/sounds/happy-birthday-to-you.mp3" type="audio/mpeg">
+</audio><div class="container"><h1>🎉 HAPPY BIRTHDAY JEM 🎉</h1><div class="subtitle">Today the internet celebrates the legendary human named <b>Jem</b>.</div><div class="card">
+<p>Breaking News: Scientists discovered that birthday cake increases happiness by <b>1000%</b>.</p>
+<p>Cats around the world gathered today for a global meeting and voted:</p>
+<p><b>"Jem deserves unlimited cake and memes."</b></p><img class="gif" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+<img class="gif" src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif"><button onclick="showMessage()">Open Secret Birthday Message</button>
+
+<div id="secret" class="hidden">
+🎂 Surprise Jem! 🎂
+<br><br>
+The cats sent a message:
+<br>
+"Meow Meow Meow" (translation: Happy Birthday!)
+<br><br>
+May your day be full of:
+<br>
+🎂 Cake
+<br>
+🐱 Cats
+<br>
+😂 Memes
+<br>
+✨ And zero stress
+</div></div><div class="cat-area"><h2>🐱 Catch The Birthday Cats Game</h2>
+<p>Click the cat to collect birthday points!</p><div class="cat" onclick="addPoint()">🐱</div><div class="score">Points: <span id="points">0</span></div></div><footer>
+Made with memes and cats for Jem 🐾
+</footer></div><script>
+
+let score = 0;
+
+function showMessage(){
+ document.getElementById("secret").style.display = "block";
+}
+
+function addPoint(){
+ score++;
+ document.getElementById("points").innerText = score;
+
+ if(score === 10){
+  alert("🎉 Birthday Cat says: Jem unlocked the Cake Level!");
+ }
+
+ if(score === 25){
+  alert("🐱 Meme Master! Happy Birthday Jem!");
+ }
+}
+
+</script></body>
+</html>
